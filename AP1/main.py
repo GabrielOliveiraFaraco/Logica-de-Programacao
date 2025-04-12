@@ -1,4 +1,4 @@
-print("Olá, aqui você fara um teste de qual área de programação você se encaixa melhor!\n\nEntre elas, estão:\nA. Desenvolvimento de Software\nB. Área de Produtos (UX/UI, Product Owner, Product Manager, etc.)\nC. Área de Qualidade (Testes, QA, automação de testes, etc.)\n\nPara isso, você responderá algumas perguntas utilizando números de 1 a 5.\n\nA pontuação de cada pergunta será:\n1. Discordo totalmente\n2. Discordo\n3. Neutro\n4. Concordo\n5. Concordo totalmente\n\nVamos começar!\n")
+print("\n\nOlá, aqui você fara um teste de qual área de programação você se encaixa melhor!\n\nEntre elas, estão:\nA. Desenvolvimento de Software\nB. Área de Produtos (UX/UI, Product Owner, Product Manager, etc.)\nC. Área de Qualidade (Testes, QA, automação de testes, etc.)\n\nPara isso, você responderá algumas perguntas utilizando números de 1 a 5.\n\nA pontuação de cada pergunta será:\n1. Discordo totalmente\n2. Discordo\n3. Neutro\n4. Concordo\n5. Concordo totalmente\n\nVamos começar!\n")
 
 # definindo as perguntas de Desenvolvimento de Software
 perguntas1 = ["Gosto de programar e resolver problemas com código.",
