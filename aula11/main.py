@@ -1,4 +1,4 @@
-""" lista = ["palavra", 10, True]
+lista = ["palavra", 10, True]
 
 tupla = ("palavra", 10, True)
 
@@ -42,7 +42,7 @@ for item in lista:
     print(idx, item)
     idx += 1
 idx = 0
- """
+
 matriz  = [
 
 ]

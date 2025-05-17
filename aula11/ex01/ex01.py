@@ -13,7 +13,7 @@ def tem_fruta(lista, fruta):
 
 def remover_fruta(lista, fruta):
     if fruta in lista:
-        lista.remove(fruta)
+        lista.pop(fruta)
         print("\nFruta removida com sucesso.")
         for i in lista:
             print(i)
