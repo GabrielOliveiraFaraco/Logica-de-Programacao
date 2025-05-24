@@ -1,4 +1,4 @@
-lista = ["palavra", 10, True]
+""" lista = ["palavra", 10, True]
 
 tupla = ("palavra", 10, True)
 
@@ -12,16 +12,19 @@ lista.append("nova palavra")
 
 lista.pop(0)
 
-print(lista)
-matriz = [
+print(lista) """
+
+""" matriz = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8]
 ]
 
-print(matriz[1][2])
+for i in matriz:
+    for j in i:
+        print(j) """
 
-lista = ("banana", "mamão", "uva", "café")
+""" lista = ("banana", "mamão", "uva", "café")
 idx = 0
 
 for item in lista:
@@ -41,15 +44,28 @@ lista.pop(int(input("Digite o índice do item a ser removido: ")))
 for item in lista:
     print(idx, item)
     idx += 1
-idx = 0
+idx = 0 """
 
 matriz  = [
 
 ]
 
-num = 1
+num = 0
 
-for i in range(4):
+for i in range(3):
+    linha = []
+    for j in range(3):
+        linha.append(num)
+        num += 1
+    matriz.append(linha)
+
+for i in matriz:
+    for j in i:
+        print(j)
+
+
+
+""" for i in range(4):
     linha = []
     for j in range(4):
         linha.append(num)
@@ -60,4 +76,4 @@ print(matriz)
 
 for i in matriz:
     for j in i:
-        print(j)
+        print(j) """
