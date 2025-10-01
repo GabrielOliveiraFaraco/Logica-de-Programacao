@@ -1,8 +1,24 @@
+import os
+import json
+
 biblioteca = {
     "livro": {},
     "usuario": {},
     "emprestimo": {}
 }
+
+def carregar_dados():
+    if os.path.exists("biblioteca.json"):
+        with open("biblioteca.json", "r") as arquivo:
+            global biblioteca
+            biblioteca = json.load(arquivo)
+    else:
+        print("\nNenhum dado encontrado. Iniciando com biblioteca vazia.")
+        
+def salvar_dados():
+    with open("biblioteca.json", "w") as arquivo:
+        json.dump(biblioteca, arquivo, indent=4)
+    print("\nDados salvos com sucesso.")
 
 def cadastrar_livro():
     adicionar_livro = input("\nCadastrar um livro? (sim ou não): ").strip().lower()
@@ -19,6 +35,7 @@ def cadastrar_livro():
                 "ano_publicacao": ano_publicacao
             }
             print("\nLivro adicionado com sucesso.")
+            salvar_dados()
     else:
         print("\nCadastro de livro cancelado.")
 
@@ -40,6 +57,7 @@ def cadastrar_usuario():
                         "nome": nome
                     }
                     print("\nUsuário cadastrado com sucesso.")
+                    salvar_dados()
                     break
             except ValueError:
                 print("\nErro ao cadastrar usuário. Tente novamente.")
@@ -65,6 +83,7 @@ def emprestimo_de_livro():
         else:
             biblioteca["emprestimo"][titulo] = cpf
             print(f"\nLivro '{titulo}' emprestado para {biblioteca['usuario'][cpf]['nome']}.")
+        salvar_dados()
     else:
         print("\nEmprestimo de livro cancelado.")
 
@@ -79,10 +98,12 @@ def listar_livros():
                 print(f"- {titulo} (Emprestado para: {biblioteca['usuario'][cpf]['nome']})")
         else:
             print("\nNenhum livro retirado.")
+        salvar_dados()
     else:
         print("\nNenhum livro cadastrado.")
 
 def menu():
+    carregar_dados()
     while True:
         print("\nMenu:")
         print("1. Adicionar livro")
